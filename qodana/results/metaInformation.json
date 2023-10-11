@@ -8,12 +8,12 @@
     "vcs": {
       "sarifIdea": {
         "repositoryUri": "https://github.com/rdd13r/welcome-clerk.git",
-        "revisionId": "522e731ff4a5b550d020f63a22ed4b1351967519",
+        "revisionId": "f869e57cc66da1181b176d97e93f230c6afa3863",
         "branch": "56-document-spring-boot-type-of-a-ddd-aggregate"
       }
     },
     "deviceId": "200820300000000-7946-aaa1-8b8c-be43ff5f9941",
-    "jobUrl": "https://github.com/rdd13r/welcome-clerk/actions/runs/6486743103",
+    "jobUrl": "https://github.com/rdd13r/welcome-clerk/actions/runs/6486747333",
     "repoUrl": "https://github.com/rdd13r/welcome-clerk.git"
   }
 }
