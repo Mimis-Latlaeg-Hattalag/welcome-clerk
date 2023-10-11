@@ -1,0 +1,3 @@
+= ToDo:
+
+Start here: https://blog.jetbrains.com/kotlin/tag/competition/

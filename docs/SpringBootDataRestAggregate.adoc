@@ -1,0 +1,40 @@
+= Placeholder for Spring Boot Aggregate Documentation
+
+== Gathered Resources:
+
+- https://spring.io/blog/category/news[The State of Spring Survey 2022 Is Here!]
+
+'''
+
+- https://docs.spring.io/spring-restdocs/docs/current/[Spring RESTDocs]
+- https://docs.spring.io/spring-boot/docs/current/[Spring Boot Docs]
+
+'''
+
+- https://docs.spring.io/spring-hateoas/docs/current/reference/html/[Spring HATEOAS - Reference Documentation]
+
+'''
+
+- https://docs.spring.io/spring-kafka/[Spring for Kafka]
+
+'''
+
+- https://docs.spring.io/spring-data/[Spring Data]
+- https://www.mongodb.com/compatibility/spring-boot[Spring Boot Integration with MongoDB Tutorial]
+
+'''
+
+- https://spring.io/blog/2020/04/23/spring-tips-configuration[Spring Tips: Configuration]
+
+'''
+- https://docs.spring.io/spring-security/reference/[Spring Security Reference]
+- https://spring.io/guides/topicals/spring-security-architecture[Spring Security Architecture]
+- https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config.encrypting[Spring Application: Core Features, Security]
+- https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter[Spring Security without the WebSecurityConfigurerAdapter]
+- https://www.marcobehler.com/guides/spring-security[Spring Security: Authentication and Authorization In-Depth]
+- https://www.danvega.dev/blog/2022/09/06/spring-security-jwt/[SPRING BOOT JWT - HOW TO SECURE YOUR REST APIS WITH SPRING SECURITY AND JSON WEB TOKENS]
+- https://www.initgrep.com/posts/java/spring/spring-security-oauth2-jwt-authentication-resource-server[Spring Security Oauth2- JWT Authentication in a resource server]
+
+'''
+
+- https://start.spring.io/[spring initializr]
