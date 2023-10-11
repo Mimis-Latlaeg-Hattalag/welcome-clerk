@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Security | Kotlin DDD Archetypes</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Security" />
+<meta name="author" content="Vadim Kuhay" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Customer ‘Welcome Clerk’ Aggregate Example" />
+<meta property="og:description" content="Customer ‘Welcome Clerk’ Aggregate Example" />
+<link rel="canonical" href="https://rdd13r.github.io/welcome-clerk/_pages/security.html" />
+<meta property="og:url" content="https://rdd13r.github.io/welcome-clerk/_pages/security.html" />
+<meta property="og:site_name" content="Kotlin DDD Archetypes" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Security" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Vadim Kuhay"},"description":"Customer ‘Welcome Clerk’ Aggregate Example","headline":"Security","url":"https://rdd13r.github.io/welcome-clerk/_pages/security.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/welcome-clerk/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://rdd13r.github.io/welcome-clerk/feed.xml" title="Kotlin DDD Archetypes" /><!--suppress HtmlUnknownTarget -->
+<link rel="shortcut icon" type="image/x-icon" href="/welcome-clerk/favicon.ico"></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/welcome-clerk/">Kotlin DDD Archetypes</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/welcome-clerk/home.html">Welcome</a><a class="page-link" href="/welcome-clerk/_pages/about.html">About</a><a class="page-link" href="/welcome-clerk/_pages/security.html">Security</a><a class="page-link" href="/welcome-clerk/_pages/references.html">References</a><a class="page-link" href="/welcome-clerk/list/">Post Index</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Security</h1>
+  </header>
+
+  <div class="post-content">
+    <div class="paragraph">
+<p><strong><em>STEP 0 (zero)</em></strong></p>
+</div>
+<div class="paragraph">
+<p>In
+<a href="https://en.wikipedia.org/wiki/Hacker_culture" target="_blank" rel="noopener">our culture</a>,
+founded on the
+<a href="https://en.wikipedia.org/wiki/Virtue_ethics">virtue ethic</a>, <em>rather</em>,
+<a href="https://en.wikipedia.org/wiki/Hacker_ethic">its modern day equivalent</a>,
+<em>which happens to be the <strong>fiercely protected</strong> culture of all technology-borne market leaders of today</em>
+(<a href="https://jobs.netflix.com/culture">just an example</a>),
+<strong>the sequence of addressed concerns follows this path</strong>:<br>
+&nbsp;<br>
+<strong><em>security</em></strong> &#8594; <strong>fixture</strong> &#8594; <em>feature</em> &#8594; socialization;<br>
+&nbsp;<br>
+which, as many may notice, is the exact opposite to how <em>IT cogs</em> do things at <em>laggards</em>,
+say, prominent American insurance or financial giants.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Immediately</em></strong> upon <em>preliminary modelling</em> of the business domain <a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank" rel="noopener"><strong>bounded context</strong></a> two fundamental concerns are mapped on the <strong><em>team&#8217;s risk board</em></strong>, typically to the left of <em>the front-and-center <strong>event storming</strong> board</em>, which are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>authorizations, entitlements, sensitivity - <em>who can do or get to resources</em></p>
+</li>
+<li>
+<p>ownership, custody, privacy, retention, disposition - <em>how information handling must happen</em></p>
+</li>
+<li>
+<p><strong>compliance</strong> data breach recovery pipelines - <em>detect, inspect, assess, mitigate, report</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <strong><em>security crosscut</em> is directly wired into corporate <em>risk policies</em></strong> and is the only crosscut with <em>unbounded</em> scope.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="title">Laggard check</div>
+<div class="paragraph">
+<p>Be vigilant: due to lack of competence in certain institutions this concern is executed last instead of first.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect1">
+<h2 id="fixture">Fixture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><em>STEP 1 (one)</em></strong></p>
+</div>
+<div class="paragraph">
+<p>With the <em>bounded context (BC)</em> placement firmly discovered as evident from security mapping the expected artifacts can be:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>created <em>blank in-whole</em></p>
+</li>
+<li>
+<p>with security <em>fully wired-in</em></p>
+</li>
+<li>
+<p><strong>deployed <em>to production</em>!</strong></p>
+</li>
+<li>
+<p>as at-least a single BC anchor</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>This is the meaning of the <em>DevOps</em>: dev and ops together end-to-end with the ownership of solution on DEV!!!</strong></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="title">Laggard check</div>
+<div class="paragraph">
+<p>Be vigilant: it&#8217;s not the Ops, often known as <em>"The DevOps Team"</em> at laggards, that decides how artifacts are built and deployed - it&#8217;s the developers making the artifacts, owning full freedom to create and deploy each as they see fit. Laggards hide incompetence behind fake "standards".</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="feature">Feature</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><em>STEP 2 (two)</em></strong></p>
+</div>
+<div class="paragraph">
+<p>Now that a blank component make a perfect automated test bed, formally a <strong><em>fixture</em></strong>, each behavior can be implemented as <strong><em>test first</em></strong> and pushed to production continuously in small increments.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="title">Laggard check</div>
+<div class="paragraph">
+<p>Be vigilant: look at your team - this is where laggards always fail, to produce test first, which is the same as "to define outcome first". Laggards tend to run things backwards: first code, then test, then figure out what&#8217;s really needed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="socialization">Socialization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><em>STEP 3 (three)</em></strong></p>
+</div>
+<div class="paragraph">
+<p>Like everything else, letting people know "here, new, come play in production and check it out" is <em>fully automated</em>. This step is always fully completed last on the first iteration of any delivery and stays completed ever since.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="title">Laggard check</div>
+<div class="paragraph">
+<p>Be vigilant: look at your team - are people socializing <strong><em>vaporware?</em></strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="automation">Automation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Automation is the necessary evil, and correctly it is only produced by the delivery team (dev, not ops).</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="title">Laggard check</div>
+<div class="paragraph">
+<p>Be vigilant: look at your team - are there people external to your team trying to tell you how to automate <strong><em>your deliverables</em></strong>?</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rdd13r.github.io/welcome-clerk/qodana/">GitHub Pages Qodana Scan Results</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/welcome-clerk/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://rdd13r.github.io/welcome-clerk/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/welcome-clerk/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Customer &#39;Welcome Clerk&#39; Aggregate Example</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
