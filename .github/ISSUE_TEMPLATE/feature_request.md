@@ -7,14 +7,11 @@ assignees: 'rdd13r'
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the trouble is. Ex. I'm always frustrated when [...]
+**Which business needs does this feature address?**
+A clear and concise description of business domain, business actors and behaviors.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**What is the core business value offered by this feature?**
+A clear and concise description of how business gains from implementing this feature.
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Add any other domain, bounded context, actor or aggregate related to this feature.

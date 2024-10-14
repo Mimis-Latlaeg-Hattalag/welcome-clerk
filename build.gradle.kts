@@ -1,6 +1,3 @@
-group = "me.rdd13.th15"
-version = "0.1.0"
-
 allprojects {
     repositories {
         google()
