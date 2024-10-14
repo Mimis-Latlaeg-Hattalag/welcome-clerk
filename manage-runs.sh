@@ -17,11 +17,11 @@ EOF
 # Extract specific fields with jq, compare the updatedAt field to the cutoff date, and add index
 index=0
 gh run list --all --limit $list_limit --json 'event,attempt,conclusion,startedAt,updatedAt,workflowName,workflowDatabaseId,databaseId,status,displayTitle' | \
-  jq --arg cutoff "$cutoff_date" -r '.[] | select(.updatedAt < $cutoff) | "[\(.event):\(.attempt)-\(.conclusion)-[\(.startedAt) - \(.updatedAt)]-\(.databaseId)]\n\t\(.status): \(.displayTitle) - \(.workflowName) - \(.workflowDatabaseId)"' | \
-  while read -r row; do
-    index=$((index + 1))
-    echo -e "${index} => \t$row"
-done
+  jq -r '.[] | "[\(.event):\(.attempt)-\(.conclusion)-[\(.startedAt) - \(.updatedAt)]-\(.databaseId)] -- \t\(.status): \(.displayTitle) - \(.workflowName) - \(.workflowDatabaseId)"' | \
+    while read -r row; do
+      index=$((index + 1))
+      echo -e "${index} => \t$row"
+    done
 
 # Deleting workflow runs older than 2 days
 del_index=0
