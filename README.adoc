@@ -13,10 +13,16 @@ v0.1, Mon 18 Apr 2022 03:25:25 AM EDT
 :imagesdir: ./assets/img
 ifdef::env-name[:relfilesuffix: .adoc]
 
+image::https://github.com/Mimis-Latlaeg-Hattalag/welcome-clerk/actions/workflows/qodana_code_quality.yml/badge.svg[]
+
 [#img-ukes-with]
 .Stand With Ukraine
 [link=https://stand-with-ukraine.pp.ua]
 image:https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg[Stand With Ukraine]
+
+'''
+
+*What is this?!* -- see link:index.adoc[*_the documentation_*]...
 
 '''
 
@@ -66,7 +72,7 @@ A 1922 clerk greeting customers arriving at the place of business is perhaps one
 
 == Practicality
 
-_This aggregate can also be used in https://martinfowler.com/articles/break-monolith-into-microservices.html[breaking down a monolith] using the https://martinfowler.com/bliki/StranglerFigApplication.html[Strangler Fig App] approach, for example - see the xref:alien/react-web-client/README.adoc#_2_wrap_it_with_gradle[imported and wrapped io.js example] in the *alien/* folder._
+_This aggregate can also be used in https://martinfowler.com/articles/break-monolith-into-microservices.html[breaking down a monolith] using the https://martinfowler.com/bliki/StranglerFigApplication.html[Strangler Fig App] approach, for example - see the xref:poly-ux/tx-react-web-client-deprecated/README.adoc#_2_wrap_it_with_gradle[imported and wrapped io.js example] in the *alien/* folder._
 
 == Knowledge and Acumen
 

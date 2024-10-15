@@ -62,7 +62,7 @@ exclude:
   - ACKNOWLEDGMENTS.adoc
   - ATTRIBUTIONS.adoc
   - AUTHORS
-  - build.gradle.kts
+  - build.gradle.kts.deprecated
   - CHANGELOG.adoc
   - CODE_OF_CONDUCT.md
   - CODEOWNERS

@@ -13,4 +13,4 @@ plugins {
     id("com.github.node-gradle.node") apply false
 }
 
-defaultTasks("clean", "yarn_cache_clean")
+defaultTasks("build")

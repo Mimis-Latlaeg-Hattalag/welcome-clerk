@@ -1,0 +1,18 @@
+= welcome-clerk: UX Archetypes
+R!dd13r <12781006+rdd13r@users.noreply.github.com>
+v0.2, Monday October 14th 2024
+:description: Polyglot User Interface UX
+:sectnums:
+:sectanchors:
+:sectlinks:
+:icons: font
+:toc: preamble
+:toclevels: 2
+:toc-title: UX
+:keywords: Kotlin DDD Aggregate UX UI Archetype
+:imagesdir: ./assets/img
+ifdef::env-name[:relfilesuffix: .adoc]
+
+Any type of User Interaction is supported regardless of implementation technology.
+
+ToDo: describe variant modules and corresponding setup requirements.

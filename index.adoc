@@ -1,27 +1,86 @@
-[#img-ukes-with-badge]
-[link=https://stand-with-ukraine.pp.ua]
-image:https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg[Stand With Ukraine]
+= Aggregate (_the Clerk_): Domain Software Keystone
+:rdd13r: https://github.com/rdd13r
+:for-ukraine-url: https://stand-with-ukraine.pp.ua
+:for-ukraine-svg: https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg
+:for-ukraine-msg: Stand With Ukraine
+:wiki-archetype: https://en.wikipedia.org/wiki/Archetype_(information_science)
+:fowler-ddd: https://martinfowler.com/bliki/DomainDrivenDesign.html
+:fowler-ddd-aggregate: https://martinfowler.com/bliki/DDD_Aggregate.html
+:fowler-bc: https://martinfowler.com/bliki/BoundedContext.html
+:fowler-ul: https://martinfowler.com/bliki/UbiquitousLanguage.html
+:event-storming: https://www.eventstorming.com/
 
-.🇺🇸 American Archetypes
-[quote, R!dd13r (rdd13r) 💙💛, tldr.{Haystak.v3hasharchive}.onion/2021]
+[#badge-stand-with-ukraine]
+[link={for-ukraine-url}]
+image:{for-ukraine-svg}[{for-ukraine-msg}]
+
+.One late Hacker's wisdom...
+[quote, Joseph Skrypoczka, paraphrased]
 ____
-Dastard laggards you'd saved of pity are all the stones cast in the night +
-- You'd best find to simply favor light ...
+*Dastardly laggards, spared from pity, are stones found cast into the night* +
+— one would best find to simply favor light ...
 ____
 
-*_Archetypes here are extracted from the left of the adoption curve._*
+_{rdd13r}[rdd13r] often repeats this saying of his mentor, for he's regularly reminded of its canon._
 
 '''
 
-https://github.com/rdd13r/welcome-clerk
+Whom is this for -- _Agile teams breaking down a monolith_.::
 
-_This component is a template repository to be used as a seed for creation of DDD Aggregate link:++https://en.wikipedia.org/wiki/Archetype_(information_science)++[*Archetypes*^].
-A https://martinfowler.com/bliki/DDD_Aggregate.html[*DDD Aggregate*^] is a special a microservice regularly created and utilized by competent business software teams. Its definition is typically borne out of https://www.eventstorming.com/[*Event Storming*^]. Its nature resembles a job description for a 1920 business clerk. It is defined and implemented through https://dannorth.net/introducing-bdd/[behavior test specifications], such is https://en.wikipedia.org/wiki/Behavior-driven_development[*BDD*]. This is the universal business automation methodology https://en.wikipedia.org/wiki/Technology_adoption_life_cycle[among the market leaders^] in *2005* and the late majority by 2013._
+This component is a seed learning trail for creating an **aggregate** (_of {fowler-ddd}[DDD], of course_.) +
+Once useful and well-received, the domain team may elect to *_template_* this component, +
+_extracting `this` clerk_ into an {wiki-archetype}[*archetype*^] promoting reuse elsewhere in the organization. +
+This '{fowler-ddd-aggregate}[*aggregate*^]' is a special microservice that automates related business behavior, +
+akin to a person's job description.
+Decomposing a monolith teams creates aggregates.
++
+{event-storming}[*Event storming ceremonies*^] produce models of business behavior,
+such as in a restaurant, +
+where actors like waiters, cooks, and bartenders have meaningful job descriptions. +
+The _implicit commonality of understanding_ that gives these "job descriptions" a concrete meaning +
+is the {fowler-bc}[**bounded context**].
+Within the boundary, actors have concrete meanings for business words. +
+And these meanings _**change** across the **boundary**_. +
++
+For example, the word `order` is a [.underline]#_business term_# that both _the cook_ and _the waiter_ use, +
+but to each this term means a bit of different thing!
+To a waiter the _implicitly understood_ `order` +
+is a collection of menu items, the prices (and expected tip perhaps), as well as the table number, +
+size of the party, and choices like "should the food be held and brought to the table together." +
+The cook, of course, can care less for seating arrangements and wants to see is the stake requested rare. +
+This common language between all waiters and bartenders is called _the **ubiquitous language**_. +
+People in the kitchen have their own ubiquitous language, which is different from the dining room.
++
+*_Alluring canonical concepts emerge when we attempt to automate the said restaurant!_* +
+Regardless of the extent of the automation, be it the total remake where the waiter is a cute robot, +
+or partial where a human is augmented with some software -- *_the domain does not change!_* +
+Domain is a human concept after all, i.e., restaurant business of the hospitality industry; +
+aggregates are the old employees, wholly or in part -- but where is the engineering team?!
++
+As it turns out, the engineering team as a whole, i.e., developers, business experts, support staff, +
+the waiters and the cooks -- are all part of the domain.
+These extended multidisciplinary teams +
+are injected into business and NOT the other way around!
+_This is the part that amateurs always +
+get wrong to the great detriment of the entire business_!
+But once corrected, _the **{fowler-ul}[ubiquitous language]**_ +
+of the business is extended to the engineering teams and not the other way around.
++
+There is so much more fun to this -- so dig into the code!
 
+This is NOT for people looking to copy-paste the code not interested in learning 'why'::
+
+Nothing here will give you a fish to fry because that is a waste of everyone's time. +
+Here we are hands-on fishing for the knowledge instead.
+
+'''
+
+Please follow the documentation section for the evolution of this context aggregate - the welcome clerk.
 
 '''
 
 [#img-ukes-with]
-.Stand With Ukraine
+.{for-ukraine-msg}
 [link=https://stand-with-ukraine.pp.ua]
 image:https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg[Stand With Ukraine]
+💙💛

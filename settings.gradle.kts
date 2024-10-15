@@ -46,4 +46,4 @@ pluginManagement {
 
 rootProject.name = "welcome-clerk"
 
-include(":domain:root", ":alien:react-web-client")
+//include(":domain:root")
