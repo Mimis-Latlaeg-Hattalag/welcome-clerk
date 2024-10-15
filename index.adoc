@@ -31,74 +31,59 @@ the [.underline]#business assets#, rather than wasting time and energy on futile
 
 '''
 
-== Whom is this for?
+== Who is this for?
 
 *_Agile teams breaking down a monolith_*
 
-This component serves as a seed learning trail for creating an **aggregate** (_as defined in {fowler-ddd}[DDD]_.) +
-Once this component is useful and well-received, the domain team may choose to *_template_* it, +
-extracting `this` clerk into an {wiki-archetype}[*archetype*^], promoting reuse across the organization. +
-This '{fowler-ddd-aggregate}[*aggregate*^]' is a specialized microservice that automates related business behavior, +
-much like a person's job description defines their role within an organization.
+This component is a starting point for learning how to create an **aggregate** (_as defined in {fowler-ddd}[DDD]_). +
+Once this component is useful and well-received, the domain team may choose to _template_ it, +
+turning `this` clerk into an {wiki-archetype}[*archetype*^] for reuse across the organization. +
+This '{fowler-ddd-aggregate}[*aggregate*^]' is a specialized microservice that automates business behaviors, +
+much like a job description defines the role of a person in an organization.
 
-Decomposing a monolith leads to the creation of aggregates. +
-{event-storming}[*Event storming ceremonies*^] help produce models of business behavior, +
-such as in a restaurant, where actors like waiters, cooks, and bartenders +
-have *_meaningful job descriptions_*.
-That is what we must automate!
+Breaking down a monolith leads to the creation of aggregates. +
+{event-storming}[*Event storming*^] ceremonies help teams model business behaviors, +
+such as those in a restaurant, where actors like waiters, cooks, +
+and bartenders have clearly defined roles.
+These roles +
+are the _job descriptions_ we aim to automate!
 
 === Bounded Contexts and Ubiquitous Language
 
-The {jungian-archetypes}[_implicit commonality of understanding_] that gives *_these_* "job descriptions" +
-a concrete meaning is the {fowler-bc}[**bounded context**].
-Within a bounded context, +
-actors have specific behaviors and outcomes for business terms tied to $$. +
-**Across boundaries**, however, the same words represent *_different_* concepts, +
-creating a distinct vernacular, (i.e., language).
-For example, let's imagine +
-what `order` means to a _waiter_ and a _cook_.
+The {jungian-archetypes}[_common understanding_] that gives these "job descriptions" +
+their meaning exists within the {fowler-bc}[**bounded context**]. +
+Within the bounded context, actors have specific business terms +
+tied to clear behaviors and outcomes.
+However, **across boundaries**, +
+the same words may represent *_different_* concepts, +
+creating distinct vocabularies, or vernaculars.
 
-Word `order` is a business term used by both _the cook_ and _the waiter_, but each of the two +
-interprets it differently.
-To a waiter, the `order` involves menu items, prices, the table number, +
-and the dining experience.
-For the cook, the `order` represents specific food preparation +
-preferences like how the steak should be cooked, ingredients, recipes, techniques, and so on.
-
-This common understanding between all waitstaff constitutes their _**ubiquitous language**_, +
-but this language differs from that used in the kitchen.
-And so, we have crossed the boundary.
 
 == What really happens here?!
 
-Getting with the times in 2024 what we do to survive is automating the business processes. +
-More importantly than 'what' is 'who' automates the business.
-And it's not some posy that's +
-external to the business, it's a multidisciplinary _team injected right into_ the business. +
-And most importantly is 'how' we automate our business -- from inside out. +
-Essentially, continuously working ourselves out of work.
+In 2024, survival depends on automating business processes effectively. +
+But more important than 'what' we automate is 'who' does the automating. +
+It’s not an external group disconnected from the business -- it’s a multidisciplinary team, +
+embedded directly in the business.
+Most importantly, the key to successful automation +
+is **how** we approach it -- from the inside out.
+At its core, this process is about +
+continuously working ourselves out of work -- constantly refining, simplifying, +
+and automating as we go.
 
-Companies that don't get this don't make it.
+Organizations that don’t understand this struggle to survive in today's competitive landscape.
 
-== This journey is creating one such clerk end-to-end.
-
-_So, roll up your sleeves and link:docs/[let's get started]._
-
-=== Hands-On Learning
-
-This repository is NOT for those looking to copy-paste code without understanding 'why'.::
-
-The purpose here is to encourage hands-on learning, where we fish for knowledge, not just results. +
-We aim to deepen our understanding of **Domain-Driven Design**, **aggregates**, and **bounded contexts** as applied in real-world systems.
-And we do so by building this **welcome clerk**, one such real world system.
+'''
+{nbsp} 🧐 💻 📚 📈 🎉
 
 '''
 
-Please follow link:docs/[the documentation section] to follow the evolution of this context aggregate - the {welcome-clerk}[welcome clerk].
+_Ready to dive in? Roll up your sleeves and link:docs/[get started here]._
 
 '''
 
-💙💛
+{nbsp} 💙💛
+
 [#img-ukes-with]
 .{for-ukraine-msg}
 [link=https://stand-with-ukraine.pp.ua]
