@@ -9,78 +9,97 @@
 :fowler-bc: https://martinfowler.com/bliki/BoundedContext.html
 :fowler-ul: https://martinfowler.com/bliki/UbiquitousLanguage.html
 :event-storming: https://www.eventstorming.com/
+:jungian-archetypes: https://en.wikipedia.org/wiki/Jungian_archetypes
+:welcome-clerk: https://github.com/Mimis-Latlaeg-Hattalag/welcome-clerk
 
 [#badge-stand-with-ukraine]
 [link={for-ukraine-url}]
 image:{for-ukraine-svg}[{for-ukraine-msg}]
 
-.One late Hacker's wisdom...
+.One Legendary Hacker-Mentor's Wisdom...
 [quote, Joseph Skrypoczka, paraphrased]
 ____
 *Dastardly laggards, spared from pity, are stones found cast into the night* +
 — one would best find to simply favor light ...
 ____
 
-_{rdd13r}[rdd13r] often repeats this saying of his mentor, for he's regularly reminded of its canon._
+_{rdd13r}[rdd13r] often repeats this saying of his mentor, for he's regularly reminded of its importance +
+in guiding teams towards pragmatic action.
+In the context of software development, +
+it serves as a reminder to focus on *minimalism*, *clarity*, *simplicity*, and *productive* efforts; +
+the [.underline]#business assets#, rather than wasting time and energy on futile or resistant paths._
 
 '''
 
-Whom is this for -- _Agile teams breaking down a monolith_.::
+== Whom is this for?
 
-This component is a seed learning trail for creating an **aggregate** (_of {fowler-ddd}[DDD], of course_.) +
-Once useful and well-received, the domain team may elect to *_template_* this component, +
-_extracting `this` clerk_ into an {wiki-archetype}[*archetype*^] promoting reuse elsewhere in the organization. +
-This '{fowler-ddd-aggregate}[*aggregate*^]' is a special microservice that automates related business behavior, +
-akin to a person's job description.
-Decomposing a monolith teams creates aggregates.
-+
-{event-storming}[*Event storming ceremonies*^] produce models of business behavior,
-such as in a restaurant, +
-where actors like waiters, cooks, and bartenders have meaningful job descriptions. +
-The _implicit commonality of understanding_ that gives these "job descriptions" a concrete meaning +
-is the {fowler-bc}[**bounded context**].
-Within the boundary, actors have concrete meanings for business words. +
-And these meanings _**change** across the **boundary**_. +
-+
-For example, the word `order` is a [.underline]#_business term_# that both _the cook_ and _the waiter_ use, +
-but to each this term means a bit of different thing!
-To a waiter the _implicitly understood_ `order` +
-is a collection of menu items, the prices (and expected tip perhaps), as well as the table number, +
-size of the party, and choices like "should the food be held and brought to the table together." +
-The cook, of course, can care less for seating arrangements and wants to see is the stake requested rare. +
-This common language between all waiters and bartenders is called _the **ubiquitous language**_. +
-People in the kitchen have their own ubiquitous language, which is different from the dining room.
-+
-*_Alluring canonical concepts emerge when we attempt to automate the said restaurant!_* +
-Regardless of the extent of the automation, be it the total remake where the waiter is a cute robot, +
-or partial where a human is augmented with some software -- *_the domain does not change!_* +
-Domain is a human concept after all, i.e., restaurant business of the hospitality industry; +
-aggregates are the old employees, wholly or in part -- but where is the engineering team?!
-+
-As it turns out, the engineering team as a whole, i.e., developers, business experts, support staff, +
-the waiters and the cooks -- are all part of the domain.
-These extended multidisciplinary teams +
-are injected into business and NOT the other way around!
-_This is the part that amateurs always +
-get wrong to the great detriment of the entire business_!
-But once corrected, _the **{fowler-ul}[ubiquitous language]**_ +
-of the business is extended to the engineering teams and not the other way around.
-+
-There is so much more fun to this -- so dig into the code!
+*_Agile teams breaking down a monolith_*
 
-This is NOT for people looking to copy-paste the code not interested in learning 'why'::
+This component serves as a seed learning trail for creating an **aggregate** (_as defined in {fowler-ddd}[DDD]_.) +
+Once this component is useful and well-received, the domain team may choose to *_template_* it, +
+extracting `this` clerk into an {wiki-archetype}[*archetype*^], promoting reuse across the organization. +
+This '{fowler-ddd-aggregate}[*aggregate*^]' is a specialized microservice that automates related business behavior, +
+much like a person's job description defines their role within an organization.
 
-Nothing here will give you a fish to fry because that is a waste of everyone's time. +
-Here we are hands-on fishing for the knowledge instead.
+Decomposing a monolith leads to the creation of aggregates. +
+{event-storming}[*Event storming ceremonies*^] help produce models of business behavior, +
+such as in a restaurant, where actors like waiters, cooks, and bartenders +
+have *_meaningful job descriptions_*.
+That is what we must automate!
+
+=== Bounded Contexts and Ubiquitous Language
+
+The {jungian-archetypes}[_implicit commonality of understanding_] that gives *_these_* "job descriptions" +
+a concrete meaning is the {fowler-bc}[**bounded context**].
+Within a bounded context, +
+actors have specific behaviors and outcomes for business terms tied to $$. +
+**Across boundaries**, however, the same words represent *_different_* concepts, +
+creating a distinct vernacular, (i.e., language).
+For example, let's imagine +
+what `order` means to a _waiter_ and a _cook_.
+
+Word `order` is a business term used by both _the cook_ and _the waiter_, but each of the two +
+interprets it differently.
+To a waiter, the `order` involves menu items, prices, the table number, +
+and the dining experience.
+For the cook, the `order` represents specific food preparation +
+preferences like how the steak should be cooked, ingredients, recipes, techniques, and so on.
+
+This common understanding between all waitstaff constitutes their _**ubiquitous language**_, +
+but this language differs from that used in the kitchen.
+And so, we have crossed the boundary.
+
+== What really happens here?!
+
+Getting with the times in 2024 what we do to survive is automating the business processes. +
+More importantly than 'what' is 'who' automates the business.
+And it's not some posy that's +
+external to the business, it's a multidisciplinary _team injected right into_ the business. +
+And most importantly is 'how' we automate our business -- from inside out. +
+Essentially, continuously working ourselves out of work.
+
+Companies that don't get this don't make it.
+
+== This journey is creating one such clerk end-to-end.
+
+_So, roll up your sleeves and link:docs/[let's get started]._
+
+=== Hands-On Learning
+
+This repository is NOT for those looking to copy-paste code without understanding 'why'.::
+
+The purpose here is to encourage hands-on learning, where we fish for knowledge, not just results. +
+We aim to deepen our understanding of **Domain-Driven Design**, **aggregates**, and **bounded contexts** as applied in real-world systems.
+And we do so by building this **welcome clerk**, one such real world system.
 
 '''
 
-Please follow the documentation section for the evolution of this context aggregate - the welcome clerk.
+Please follow link:docs/[the documentation section] to follow the evolution of this context aggregate - the {welcome-clerk}[welcome clerk].
 
 '''
 
+💙💛
 [#img-ukes-with]
 .{for-ukraine-msg}
 [link=https://stand-with-ukraine.pp.ua]
 image:https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg[Stand With Ukraine]
-💙💛
