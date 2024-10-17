@@ -5,7 +5,9 @@
 | Date | News
 
 | April 17, 2022 | Initial idea pilot.
+| August 22, 2022 | Completed v1.0 release.
+| October 24, 2022 | Used to coach a transformation customer.
+| April 20, 2023 | Completed v1.1 release having finalized transformative trails.
+| October 07, 2024 | Deprecated, in favor of rebasing to current technology and publishing the trails as Open Source.
 
 |===
-
-For fixes and more detail, please view the https://github.com/???/pulls?q=is%3Apr+is%3Aclosed[list of pull requests].

@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Companion" type="KtorApplicationConfigurationType" factoryName="Ktor">
+    <option name="MAIN_CLASS_NAME" value="me.rdd13.th15.ApplicationKt" />
+    <module name="welcome-clerk.utils.main" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+    <option name="alternativeJrePath" />
+    <option name="alternativeJrePathEnabled" value="false" />
+    <option name="includeProvidedScope" value="false" />
+    <option name="mainClass" value="me.rdd13.th15.ApplicationKt" />
+    <option name="passParentEnvs" value="true" />
+    <option name="programParameters" value="" />
+    <option name="shortenCommandLine" />
+    <option name="vmParameters" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/utils" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
