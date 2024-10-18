@@ -1,27 +1,90 @@
-[#img-ukes-with-badge]
-[link=https://stand-with-ukraine.pp.ua]
-image:https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg[Stand With Ukraine]
+= Aggregate (_the Clerk_): Domain Software Keystone
+:rdd13r: https://github.com/rdd13r
+:for-ukraine-url: https://stand-with-ukraine.pp.ua
+:for-ukraine-svg: https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg
+:for-ukraine-msg: Stand With Ukraine
+:wiki-archetype: https://en.wikipedia.org/wiki/Archetype_(information_science)
+:fowler-ddd: https://martinfowler.com/bliki/DomainDrivenDesign.html
+:fowler-ddd-aggregate: https://martinfowler.com/bliki/DDD_Aggregate.html
+:fowler-bc: https://martinfowler.com/bliki/BoundedContext.html
+:fowler-ul: https://martinfowler.com/bliki/UbiquitousLanguage.html
+:event-storming: https://www.eventstorming.com/
+:jungian-archetypes: https://en.wikipedia.org/wiki/Jungian_archetypes
+:welcome-clerk: https://github.com/Mimis-Latlaeg-Hattalag/welcome-clerk
 
-.🇺🇸 American Archetypes
-[quote, R!dd13r (rdd13r) 💙💛, tldr.{Haystak.v3hasharchive}.onion/2021]
+[#badge-stand-with-ukraine]
+[link={for-ukraine-url}]
+image:{for-ukraine-svg}[{for-ukraine-msg}]
+
+.One Legendary Hacker-Mentor's Wisdom...
+[quote, Joseph Skrypoczka, paraphrased]
 ____
-Dastard laggards you'd saved of pity are all the stones cast in the night +
-- You'd best find to simply favor light ...
+*Dastardly laggards, spared from pity, are stones found cast into the night* +
+— one would best find to simply favor light ...
 ____
 
-*_Archetypes here are extracted from the left of the adoption curve._*
+_{rdd13r}[rdd13r] often repeats this saying of his mentor, for he's regularly reminded of its importance +
+in guiding teams towards pragmatic action.
+In the context of software development, +
+it serves as a reminder to focus on *minimalism*, *clarity*, *simplicity*, and *productive* efforts; +
+the [.underline]#business assets#, rather than wasting time and energy on futile or resistant paths._
 
 '''
 
-https://github.com/rdd13r/welcome-clerk
+== Who is this for?
 
-_This component is a template repository to be used as a seed for creation of DDD Aggregate link:++https://en.wikipedia.org/wiki/Archetype_(information_science)++[*Archetypes*^].
-A https://martinfowler.com/bliki/DDD_Aggregate.html[*DDD Aggregate*^] is a special a microservice regularly created and utilized by competent business software teams. Its definition is typically borne out of https://www.eventstorming.com/[*Event Storming*^]. Its nature resembles a job description for a 1920 business clerk. It is defined and implemented through https://dannorth.net/introducing-bdd/[behavior test specifications], such is https://en.wikipedia.org/wiki/Behavior-driven_development[*BDD*]. This is the universal business automation methodology https://en.wikipedia.org/wiki/Technology_adoption_life_cycle[among the market leaders^] in *2005* and the late majority by 2013._
+*_Agile teams breaking down a monolith_*
 
+This component is a starting point for learning how to create an **aggregate** (_as defined in {fowler-ddd}[DDD]_). +
+Once this component is useful and well-received, the domain team may choose to _template_ it, +
+turning `this` clerk into an {wiki-archetype}[*archetype*^] for reuse across the organization. +
+This '{fowler-ddd-aggregate}[*aggregate*^]' is a specialized microservice that automates business behaviors, +
+much like a job description defines the role of a person in an organization.
+
+Breaking down a monolith leads to the creation of aggregates. +
+{event-storming}[*Event storming*^] ceremonies help teams model business behaviors, +
+such as those in a restaurant, where actors like waiters, cooks, +
+and bartenders have clearly defined roles.
+These roles +
+are the _job descriptions_ we aim to automate!
+
+=== Bounded Contexts and Ubiquitous Language
+
+The {jungian-archetypes}[_common understanding_] that gives these "job descriptions" +
+their meaning exists within the {fowler-bc}[**bounded context**]. +
+Within the bounded context, actors have specific business terms +
+tied to clear behaviors and outcomes.
+However, **across boundaries**, +
+the same words may represent *_different_* concepts, +
+creating distinct vocabularies, or vernaculars.
+
+
+== What really happens here?!
+
+In 2024, survival depends on automating business processes effectively. +
+But more important than 'what' we automate is 'who' does the automating. +
+It’s not an external group disconnected from the business -- it’s a multidisciplinary team, +
+embedded directly in the business.
+Most importantly, the key to successful automation +
+is **how** we approach it -- from the inside out.
+At its core, this process is about +
+continuously working ourselves out of work -- constantly refining, simplifying, +
+and automating as we go.
+
+Organizations that don’t understand this struggle to survive in today's competitive landscape.
 
 '''
+{nbsp} 🧐 💻 📚 📈 🎉
+
+'''
+
+_Ready to dive in? Roll up your sleeves and link:docs/[get started here]._
+
+'''
+
+{nbsp} 💙💛
 
 [#img-ukes-with]
-.Stand With Ukraine
+.{for-ukraine-msg}
 [link=https://stand-with-ukraine.pp.ua]
 image:https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg[Stand With Ukraine]

@@ -114,4 +114,4 @@ build
 ### rdd13r
 /Gemfile.lock
 # Note, this is added as a stop measure for a component that isn't used
-/alien/react-web-client/yarn.lock
+/utils/docs/index.html

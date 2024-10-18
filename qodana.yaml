@@ -1,6 +1,24 @@
 version: "1.0"
-linter: jetbrains/qodana-jvm-community:2024.1
 profile:
   name: qodana.recommended
+
+projectJDK: temurin-21
+
+bootstrap: sh ./prepare-qodana.sh
+
+linter: jetbrains/qodana-jvm-community:2024.2
+
+failureConditions:
+  severityThresholds:
+    any: 11
+    critical: 3
+    high: 5
+    moderate: 13
+    low: 23
+    info: 99
+  testCoverageThresholds:
+    fresh: 50
+    total: 70
+
 include:
   - name: CheckDependencyLicenses

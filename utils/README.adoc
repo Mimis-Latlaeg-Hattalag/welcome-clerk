@@ -1,0 +1,17 @@
+= welcome-clerk: Companion Application
+R!dd13r <12781006+rdd13r@users.noreply.github.com>
+v0.1, Thursday October 17th 2024
+:description: Project Companion Application to allow for user actions simulation, event stream view, introspection and monitoring of the Welcome Clerk aggregate.
+:sectnums:
+:sectanchors:
+:sectlinks:
+:icons: font
+:toc: preamble
+:toclevels: 3
+:toc-title: Companion Application
+:keywords: Kotlin DDD Aggregate Archetype Spy Monitor Introspection EventStream UserActions Companion
+// :imagesdir: ./assets/img
+ifdef::env-name[:relfilesuffix: .adoc]
+
+A placeholder for companion application of Welcome Clerk aggregate to allow for user actions simulation, event stream view, introspection and monitoring of the Welcome Clerk aggregate.
+This offers better understanding of how distributed systems work by offering a peek under the covers of running bounded context.

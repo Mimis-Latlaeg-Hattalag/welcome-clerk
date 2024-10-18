@@ -1,23 +1,24 @@
 = Secure Software: Distributed System Component
+:icons: font
 
-IMPORTANT: The components demonstrated here are meant as sensible *_initializers_* and as such do *_NOT_* follow through on *_production readiness_*. _Production readiness_ is addressed in each individual end-component separately as it must be. The _archetypes_ here are merely templates offering a convenient starting point with some of the most common needs to be anticipated preempted but not necessarily resolved.
+[IMPORTANT]
+====
+The components demonstrated here are meant as sensible *_initializers_*
+and *_NOT_* follow through on *_production readiness_*.
+_Production readiness_ is addressed in each end-component separately as it must be.
+The _archetypes_ here are merely templates offering a convenient starting point with some of the most common needs to be preempted but not necessarily resolved.
+
+The key function of this example much like most code in our communities is to prompt a thinking process about values, culture, and competence.
+No artifact should take focus away from that which matters most.
+====
 
 == Supported Versions
 
-Versions >= 1.0 are supported as production-targeting *archetypes*.
-
-Each release sequence of the n.x format (i.e. 1.8) culminates into the next major incremental n+1.0 (i.e. 2.0) containing adequate production ready examples to warrant a stable archetype.
-
-Security updates are applied to the latest feature release (n.x) with the last one in the sequence contains no new features.
-
-In case of a major release leak a fix will be shipped with the next incremental (n.0) as (n.0.n -> n+1.0).
-
-All fixes are applied to the `main` branch and are automatically included in upcoming releases.
-
-CAUTION: _All security leaks are always bugs!_
+Versions >= 2.0.0 are supported by code owners as production-ready *archetypes* within their own mSaaS products.
+Entities outside our communities that use our public archetypes as examples are not withing the scope of any support.
 
 == Reporting a Vulnerability
 
-https://github.com/rdd13r/welcome-clerk/issues/new?assignees=&labels=&template=bug_report.md&title=Potential%20Vulnerability%20Discovered%3A%20Describe%20Me%20Please%21[*Report a _Potential Security Issue!_*]
+https://github.com/rdd13r/welcome-clerk/issues/new?assignees=&labels=&template=bug_report.md&title=Potential%20Vulnerability%20Discovered%3A%20Describe%20Me%20Please%21[*Report a _Potential Security Issue_*]
 
 TIP: _You can hire our community members for help with your commercial production component initialized via any of these artifacts._

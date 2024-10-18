@@ -1,5 +1,7 @@
 = Contributing
 
 Want to contribute? Great! +
-Simply drop a note to any of the link:AUTHORS[authors]
+Drop a note to any of the link:AUTHORS[authors]
 or the link:CODEOWNERS[code owners].
+
+Even better, fork and pull back!

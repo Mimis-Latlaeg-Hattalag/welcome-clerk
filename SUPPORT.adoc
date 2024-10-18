@@ -1,5 +1,8 @@
 = Support
 
-CAUTION: *_This component is not under warranty or support._*
+CAUTION: *_This is an open source component. The component is not under warranty or support by default._*
 
-_Community support is a planned option._
+_Community support is offered by the AGAIN community._
+
+Dedicated support can be acquired by reaching out to the code owners.
+
