@@ -1,3 +1,5 @@
+@file:Suppress("ktlint:standard:no-wildcard-imports")
+
 package me.rdd13.th15.plugins
 
 import io.ktor.http.*
@@ -26,7 +28,7 @@ fun Application.configureTemplating() {
             call.respondCss {
                 body {
                     backgroundColor = Color.darkBlue
-                    margin(0.px)
+                    margin = Margin(0.px)
                 }
                 rule("h1.page-title") {
                     color = Color.white
@@ -49,6 +51,6 @@ fun Application.configureTemplating() {
     }
 }
 
-suspend inline fun ApplicationCall.respondCss(builder: CSSBuilder.() -> Unit) {
-    this.respondText(CSSBuilder().apply(builder).toString(), ContentType.Text.CSS)
+suspend inline fun ApplicationCall.respondCss(builder: CssBuilder.() -> Unit) {
+    this.respondText(CssBuilder().apply(builder).toString(), ContentType.Text.CSS)
 }

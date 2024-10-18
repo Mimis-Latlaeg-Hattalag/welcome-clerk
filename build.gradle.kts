@@ -1,3 +1,4 @@
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import io.gitlab.arturbosch.detekt.Detekt
 import org.asciidoctor.gradle.jvm.AbstractAsciidoctorTask.JAVA_EXEC
 import org.asciidoctor.gradle.jvm.AsciidoctorTask
@@ -6,6 +7,7 @@ import org.asciidoctor.gradle.jvm.epub.AsciidoctorEpubTask.EPUB3
 import org.asciidoctor.gradle.jvm.pdf.AsciidoctorPdfTask
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 import org.slf4j.LoggerFactory
+
 
 private val log by lazy { LoggerFactory.getLogger("me.rdd13.th15") }
 
@@ -16,13 +18,26 @@ log.warn(
     |                                                                               |
     |               Welcome to Multiplatform Kotlin DDD Archetypes.                 |
     |                                                                               |
-    | Please refer to https://github.com/rdd13r/welcome-clerk for more information. |
+    | Please refer to                                                               |
+    |           https://github.com/Mimis-Latlaeg-Hattalag/welcome-clerk             |
+    |   for more information.                                                       |
     |                                                                               |
     |===============================================================================|
 
 
     """.trimIndent()
 )
+
+fun isNonStable(version: String): Boolean {
+    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+    val isWholeVersion = regex.matches(version)
+
+    val hasStableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
+    val isSnapshot = version.uppercase().contains("SNAPSHOT")
+    val isReleaseCandidate = version.uppercase().contains("RC")
+    val isStable = (hasStableKeyword || isWholeVersion) && !isSnapshot && !isReleaseCandidate
+    return isStable.not()
+}
 
 val useJavaVer: String by project
 val jacocoToolVersion: String by project
@@ -36,6 +51,8 @@ val adocJvmParams = listOf(
 )
 
 plugins {
+    id("com.github.ben-manes.versions")
+
     base
 
     id("org.jetbrains.kotlinx.kover") apply false
@@ -60,6 +77,38 @@ plugins {
     id("com.avast.gradle.docker-compose")
 
     id("com.github.node-gradle.node") apply false
+}
+
+configurations.all {
+    val kotlinLoggingVersion: String by project
+
+    resolutionStrategy {
+        failOnVersionConflict()
+        preferProjectModules()
+
+        force("io.github.oshai:kotlin-logging:$kotlinLoggingVersion")
+    }
+}
+
+// https://github.com/ben-manes/gradle-versions-plugin
+tasks.named<DependencyUpdatesTask>("dependencyUpdates").configure {
+
+    checkBuildEnvironmentConstraints = false
+    checkConstraints = true
+    checkForGradleUpdate = true
+    outputFormatter = "plain,json,html"
+}
+tasks.withType<DependencyUpdatesTask> {
+    resolutionStrategy {
+        componentSelection {
+            all {
+                if (isNonStable(candidate.version) && !isNonStable(currentVersion)) {
+                    log.warn("REJECTING(non-release): $currentVersion -> $candidate")
+                    reject("Not a stable release")
+                }
+            }
+        }
+    }
 }
 
 tasks.withType<Detekt>().configureEach {

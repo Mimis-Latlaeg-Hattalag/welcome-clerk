@@ -1,30 +1,47 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
-import org.gradle.api.tasks.testing.logging.TestLogEvent.*
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.STANDARD_ERROR
+import org.gradle.api.tasks.testing.logging.TestLogEvent.STANDARD_OUT
+import org.gradle.api.tasks.testing.logging.TestLogEvent.STARTED
 import org.slf4j.LoggerFactory
 
 private val log by lazy { LoggerFactory.getLogger("me.rdd13.th15.utils") }
 
+// Global kit versions
 val useJavaVer: String by project
 val kotlinVersion: String by project
 
+// Logging versions
 val slf4jVersion: String by project
 val kotlinLoggingVersion: String by project
 val logbackClassicVersion: String by project
 
+// Validation versions
 val jupiterVersion: String by project
 val kotestVersion: String by project
 val assertjVersion: String by project
 val jacocoToolVersion: String by project
 
+// KMP versions
 val kotlinxHtmlVersion: String by project
 val exposedVersion: String by project
 val h2Version: String by project
 val flaxoosExtrasVersion: String by project
+val webJarsVersion: String by project
+
+// KMP resources
+val jssJvmWrappersVersion: String by project
+val urlKotlinJsWrappers: String by project
+val urlConfluentIO: String by project
+
+val companionMainClass: String by project
 
 repositories {
     mavenCentral()
-    maven { url = uri("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/kotlin-js-wrappers") }
-    maven { url = uri("https://packages.confluent.io/maven/") }
+    maven { url = uri(urlKotlinJsWrappers) }
+    maven { url = uri(urlConfluentIO) }
 }
 
 plugins {
@@ -42,10 +59,11 @@ plugins {
 }
 
 application {
-    mainClass.set("me.rdd13.th15.ApplicationKt")
+    mainClass.set(companionMainClass)
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
+    if (isDevelopment) log.warn("\n\nCompanion application is built in development mode!\n\n")
 }
 
 java {
@@ -64,7 +82,7 @@ dependencies {
     implementation("io.github.oshai:kotlin-logging:$kotlinLoggingVersion")
     implementation("ch.qos.logback:logback-classic:$logbackClassicVersion")
 
-    implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-css-jvm:$jssJvmWrappersVersion")
 
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("io.ktor:ktor-server-auto-head-response-jvm")
@@ -82,9 +100,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
     implementation("io.ktor:ktor-server-html-builder-jvm")
 
-    implementation("org.webjars:jquery:3.2.1")
-
-    implementation("io.github.smiley4:ktor-swagger-ui:2.9.0")
+    implementation("org.webjars:jquery:$webJarsVersion")
 
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinxHtmlVersion")
     implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
@@ -160,8 +176,3 @@ tasks.withType<JacocoCoverageVerification> {
         }
     }
 }
-
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-core-jvm:$flaxoosExtrasVersion")
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-redis-jvm:$flaxoosExtrasVersion")
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-mongodb-jvm:$flaxoosExtrasVersion")
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-jdbc-jvm:$flaxoosExtrasVersion")

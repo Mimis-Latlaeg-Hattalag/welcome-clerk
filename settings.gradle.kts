@@ -10,6 +10,8 @@ include("utils")
 
 pluginManagement {
 
+    val benManesVersions: String by extra
+
     val dockerComposeVersion: String by extra
 
     val kotlinVersion: String by extra
@@ -41,6 +43,8 @@ pluginManagement {
     }
 
     plugins {
+        id("com.github.ben-manes.versions") version benManesVersions
+
         id("com.avast.gradle.docker-compose") version dockerComposeVersion
 
         // https://plugins.gradle.org/plugin/org.gradle.toolchains.foojay-resolver-convention
